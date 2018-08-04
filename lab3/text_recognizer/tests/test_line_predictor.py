@@ -19,7 +19,7 @@ class TestEmnistLinePredictor(unittest.TestCase):
             true = str(filename.stem)
             edit_distance = editdistance.eval(pred, true) / len(pred)
             print(f'Pred: "{pred}" | Confidence: {conf} | True: {true} | Edit distance: {edit_distance}')
-            self.assertLess(edit_distance, 0.2)
+            self.assertLess(edit_distance, 0.3)
 
 
 class TestEmnistLinePredictorVariableImageWidth(unittest.TestCase):
@@ -34,7 +34,7 @@ class TestEmnistLinePredictorVariableImageWidth(unittest.TestCase):
             true = str(filename.stem)
             edit_distance = editdistance.eval(pred, true) / len(pred)
             print(f'Pred: "{pred}" | Confidence: {conf} | True: {true} | Edit distance: {edit_distance}')
-            self.assertLess(edit_distance, 0.2)
+            self.assertLess(edit_distance, 0.3)
 
 
 
